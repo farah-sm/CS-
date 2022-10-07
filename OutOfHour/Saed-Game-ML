@@ -54,7 +54,7 @@ namespace Program_2.cs
             }
             else
                 Console.WriteLine($"You're too young for this game pal, just wait {yearsWait} more years");
-            Console.ReadLine();
+                Console.ReadLine();
 
         }
     }
