@@ -1,0 +1,64 @@
+using System;
+
+namespace _1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            char op, mult = 'x', div = '/', add = '+', sub = '-';
+            int num, num2, ansx, ansa, anse, anso;
+            string name;
+
+            Console.Write("Asalmu Alaykum, welcome to our custom calculator🖩. \nWhat's your name: ");
+            name = Console.ReadLine();
+
+            do
+            {
+                Console.Write("Choose your Operator (x, /, + or -): ");
+                op = Convert.ToChar(Console.ReadLine());
+            }
+            while (op != mult && op != add && op != sub && op != div);
+
+
+            Console.Write("Input Number: ");
+            num = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("Input Second Number: ");
+            num2 = Convert.ToInt32(Console.ReadLine());
+
+
+
+            if (op == 'x')
+            {
+                ansx = num * num2;
+                Console.Write($"{num} x {num2} = {ansx}");
+            }
+            else if (op == '/')
+            {
+                ansa = num / num2;
+                Console.WriteLine($"{num} / {num2} = {ansa}");
+            }
+            else if (op == '+')
+            {
+                anse = num + num2;
+                Console.WriteLine($"{num} + {num2} = {anse}");
+            }
+            else
+            {
+                anso = num - num2;
+                Console.WriteLine($"{num} - {num2} = {anso}");
+            }
+
+
+
+
+          Console.WriteLine($"Thank you for visiting our calculator {name}");
+
+        }
+
+        
+    }
+}
+
