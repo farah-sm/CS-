@@ -1,3 +1,4 @@
+
 using System;
 
 
@@ -23,12 +24,12 @@ namespace Program_2.cs
             natio = Console.ReadLine();
 
             Console.Write("Favourite Sheikh Name: ");
-            sheikh = " Sheikh" + Console.ReadLine();
+            sheikh = " Sheikh " + Console.ReadLine();
 
             Console.Write("What is your Age: ");
             age = Console.ReadLine();
 
-            Console.WriteLine("\nThank you for taking part in Mad Lib\nPress Enter to read your custom story.\n ");
+            Console.WriteLine("\nThank you for taking part in Dad Lib\nPress Enter to read your custom story.\n ");
             Console.ReadLine();
 
             Console.WriteLine("\n");
@@ -36,8 +37,14 @@ namespace Program_2.cs
             Console.WriteLine($"{noun} and I were exthatic to go hiking. ");
             Console.WriteLine($"We left the {natio} for the last ever time. ");
             Console.WriteLine($"Until we stumbled by a rough sleeper, he told us he was {age} years old. I thought, 'Hold on, so am I..'");
-            Console.WriteLine($"Listening to {sheikh} we carried on our journey until we saw a...");
+            Console.WriteLine($"Listening to {sheikh} we carried on our journey until we saw a... (HIT ENTER TO COUNTINUE)");
             Console.ReadLine();
+
+            Console.WriteLine("OOPS YOUR TRIAL RAN OUT... PAY £30 TO FINISH OFF YOUR STORY.");
+            Console.ReadLine();
+
+
+
         }
     }
 }
