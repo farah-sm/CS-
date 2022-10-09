@@ -1,64 +1,90 @@
 using System;
 
+
 namespace _1
 {
     class Program
     {
+
         static void Main(string[] args)
         {
-
             char op, mult = 'x', div = '/', add = '+', sub = '-';
-            int num, num2, ansx, ansa, anse, anso;
-            string name;
-
-            Console.Write("Asalmu Alaykum, welcome to our custom calculator🖩. \nWhat's your name: ");
-            name = Console.ReadLine();
-
+            int num, num2;
+            string name, option;
             do
-            {
-                Console.Write("Choose your Operator (x, /, + or -): ");
-                op = Convert.ToChar(Console.ReadLine());
+            { 
+                Console.WriteLine("--------------------------");
+                Console.Write("Asalmu Alaykum, welcome\nto our custom calculator. \nWhat's your name: ");
+                name = Console.ReadLine();
+                Console.WriteLine("--------------------------");
+            
+                do
+                {
+                    Console.Write("Choose your Operator \n(x, /, + or -): ");
+                    op = Convert.ToChar(Console.ReadLine());
+                }
+                while (op != mult && op != add && op != sub && op != div);
+
+
+                Console.Write("Input Number: ");
+                num = Convert.ToInt32(Console.ReadLine());
+
+                Console.Write("Input Second Number: ");
+
+                num2 = Convert.ToInt32(Console.ReadLine());
+
+
+
+                if (op == 'x')
+                    Mult(num, num2);
+                else if (op == '/')
+                    Div(num, num2);
+                else if (op == '+')
+                    Console.WriteLine($"{num} + {num2} = {Add(num, num2)}");
+                else
+                    Subt(num, num2);
+
+
+
+                Console.WriteLine("\n--------------------------");
+                Console.WriteLine($"Thank you for visiting our calculator {name}");
+                Console.WriteLine("----------------------------\n");
+                
+
+                Console.WriteLine("Would you like to use the calculator again? ");
+                option = Console.ReadLine();
+                Console.ReadLine();
             }
-            while (op != mult && op != add && op != sub && op != div);
-
-
-            Console.Write("Input Number: ");
-            num = Convert.ToInt32(Console.ReadLine());
-
-            Console.Write("Input Second Number: ");
-            num2 = Convert.ToInt32(Console.ReadLine());
-
-
-
-            if (op == 'x')
-            {
-                ansx = num * num2;
-                Console.Write($"{num} x {num2} = {ansx}");
-            }
-            else if (op == '/')
-            {
-                ansa = num / num2;
-                Console.WriteLine($"{num} / {num2} = {ansa}");
-            }
-            else if (op == '+')
-            {
-                anse = num + num2;
-                Console.WriteLine($"{num} + {num2} = {anse}");
-            }
-            else
-            {
-                anso = num - num2;
-                Console.WriteLine($"{num} - {num2} = {anso}");
-            }
-
-
-
-
-          Console.WriteLine($"Thank you for visiting our calculator {name}");
+            while (option == "yes" || option == "Yes");
 
         }
 
+        // Find out more about return
+        public static int Add(int num1, int num2) 
+        {
+            int answ = num1 + num2;
+            return answ;
+        }
+
+        public static void Mult(int num1, int num2)
+        {
+            int answ = num1 * num2;
+            Console.WriteLine($"{num1} x {num2} = {answ}");
+        }
+
+        public static void Subt(int num1, int num2)
+        {
+            int answ = num1 - num2;
+            Console.WriteLine($"{num1} - {num2} = {answ}");
+        }
+
+        public static void Div(int num1, int num2)
+        {
+            int answ = num1 / num2;
+            Console.WriteLine($"{num1} ÷ {num2} = {answ}");
+        }
+
         
+
     }
 }
-
