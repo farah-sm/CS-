@@ -34,9 +34,7 @@ namespace Program_2.cs
                 Console.Write("Favourite Sheikh Name: ");
                 sheikh = " Sheikh " + Console.ReadLine();
 
-         
-
-
+        
                 Console.WriteLine("\nThank you for taking part in Dad Lib\nPress Enter to read your custom story.\n ");
                 Console.ReadLine();
 
