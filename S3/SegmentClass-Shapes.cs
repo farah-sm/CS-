@@ -19,7 +19,7 @@ namespace Shapes
         {
 
           
-            double legnth = p1.DistanceFrom
+            double legnth = p1.DistanceFrom()
 
         }
     }
