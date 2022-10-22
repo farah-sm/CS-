@@ -1,4 +1,3 @@
-
 using System;
 
 
@@ -11,7 +10,8 @@ namespace Program_2.cs
 
             string adj, noun, natio, sheikh;
             int age;
-
+            // goto statement in use from line 53
+            beginning:
             Console.WriteLine("Welcome to Saed-Lib. The customised game where YOU dictate\nyour own story. To play, we ask you a series of questions\nand build a story tailored to your repsonses.\n\n(HIT ENTER TO BEGIN)\n\nCaution: This game is rated 18+ \n");
             Console.ReadLine();
 
@@ -20,7 +20,7 @@ namespace Program_2.cs
             age = Convert.ToInt32(Console.ReadLine());
             int yearsWait = 18 - age;
 
-            if (age > 18)
+            if (age >= 18)
             {
                 Console.Write("Random Adjective: ");
                 adj = Console.ReadLine();
@@ -48,6 +48,8 @@ namespace Program_2.cs
 
                 Console.WriteLine("OOPS YOUR TRIAL RAN OUT... PAY £30 TO FINISH OFF YOUR STORY.");
                 Console.ReadLine();
+                
+                goto beginning;
 
             }
             else
