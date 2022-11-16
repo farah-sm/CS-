@@ -2,21 +2,26 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
+using AddressProject;
 namespace Person
+
+
+
 {
     internal class Person
     {
         private string name;
         private string surname;
         private int yearsOfBirth;
-        private string address;
+       // private string address;
+        private Address address;
 
         public Person(string name_args, string surname_args, int yearsofBirth_args)
         {
             name = name_args;
             surname = surname_args;
             yearsOfBirth = yearsofBirth_args;
-            address = "";
+           // address = "";
         }
 
 
@@ -38,11 +43,11 @@ namespace Person
         }
         public void SetAddress(string addr)
         {
-            address = addr;
+            address = new Address(addr);
         }
         public string GetAddress()
         {
-            return address;
+            return address.ToString();
 
         }
 
@@ -51,7 +56,7 @@ namespace Person
             Console.WriteLine($"Name: {GetName()}");
             Console.WriteLine($"Surname: {GetSurname()}");
             Console.WriteLine($"Year of Birth: {GetYearOfBirth()}");
-            Console.WriteLine($"Address:{GetAddress()}");
+            Console.WriteLine("Address: " + address.ToString());
 
         }
 
