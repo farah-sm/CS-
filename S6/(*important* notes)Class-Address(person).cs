@@ -33,3 +33,4 @@ namespace AddressProject
 }
 
 // To make a project reference, right click over the project and click "Add" then click "Project Reference" and click the project you'd like tor reference
+// Additionally the namespace that the data is being cross referenced from would need to be explicity referenced "using *namespace*".
