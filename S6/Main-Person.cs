@@ -17,8 +17,8 @@ namespace Person
 
             // this will generate a null reference Exception
             // because the address attribute has not been set yet
-            foreach (Person p in people)
-                p.Display();
+          ///  foreach (Person p in people)
+               // p.Display();
             people[0].SetAddress("30 Hampstead Ln; London; N6 4NX");
             people[1].SetAddress("25 Castlegate; Knaresborough; HG5 8AR");
             people[2].SetAddress("59 Pier Rd; Littlehampton; BN17 5LP");
