@@ -1,4 +1,4 @@
-﻿using System.Linq.Expressions;
+using System.Linq.Expressions;
 using System.Numerics;
 using System.Drawing;
 using System.Linq.Expressions;
@@ -35,12 +35,13 @@ namespace BookAHotel
                 Console.WriteLine("\n");
                 Console.WriteLine("★━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━★");
                 Console.WriteLine($"\nReally nice to have you {name}, Welcome to our booking application");
+                Console.WriteLine("\n");
                 Console.WriteLine($"{name}'s App: \n");
-                Console.WriteLine("1. All Available Rooms");
-                Console.WriteLine("2. All Available Rooms with their Relevant Costs");
-                Console.WriteLine("3. Book a hotel room");
-                Console.WriteLine("4. Administrator Access");
-                Console.WriteLine("5. Leave\n");
+                Console.WriteLine("Option One:    All Available Rooms");
+                Console.WriteLine("Option Two:    All Available Rooms with their Relevant Costs");
+                Console.WriteLine("OPtion Three:  Book a hotel room");
+                Console.WriteLine("Option Four:   Administrator Access");
+                Console.WriteLine("OPtion Five:   Leave\n");
                 Console.WriteLine("Please select an option (enter only the relevant number that coincides with your selection):\n");
                 int option = Convert.ToInt32(Console.ReadLine());
 
@@ -125,12 +126,12 @@ namespace BookAHotel
                 do
                 {
                     Console.WriteLine("Managerial Menu: \n");
-                    Console.WriteLine("1. To add a room");
-                    Console.WriteLine("2. Deletion of a Room");
-                    Console.WriteLine("3. To list all rooms");
-                    Console.WriteLine("4. To List all rooms including their prices");
-                    Console.WriteLine("5. To compile a report");
-                    Console.WriteLine("6. Return back to the Customer Users Interface\n");
+                    Console.WriteLine("Option One:   To add a room");
+                    Console.WriteLine("Option Two:   Deletion of a Room");
+                    Console.WriteLine("Option Three: To list all rooms");
+                    Console.WriteLine("Option Four:  To List all rooms including their prices");
+                    Console.WriteLine("Option Five:  To compile a report");
+                    Console.WriteLine("Option Six:   Return back to the Customer Users Interface\n");
                     Console.WriteLine("Be sure to select an option (only enter the number):\n");
                     int option = Convert.ToInt32(Console.ReadLine());
 
@@ -154,8 +155,8 @@ namespace BookAHotel
 
                         // more from the UI
                         Console.WriteLine(" Select the type of room (enter only the number):\n");
-                        Console.WriteLine("1. Standard Room");
-                        Console.WriteLine("2. Deluxe Room");
+                        Console.WriteLine("Option One:  Standard Room");
+                        Console.WriteLine("Option Two:  Deluxe Room");
                         int typeOfRoom = Convert.ToInt32(Console.ReadLine());
 
                         // If statement if the user selects "Standard Room (option 1)"
@@ -268,9 +269,9 @@ namespace BookAHotel
         {
             Console.WriteLine("\n");
             Console.WriteLine("Size of the Room:");
-            Console.WriteLine("1. Single Bed");
-            Console.WriteLine("2. Double Bed");
-            Console.WriteLine("3. Triple Bed\n");
+            Console.WriteLine("Option One:   Single Bed");
+            Console.WriteLine("Option Two:   Double Bed");
+            Console.WriteLine("Option Three: Triple Bed\n");
             Console.WriteLine("Select an option (enter only the number):\n");
             int numberOfSize = Convert.ToInt32(Console.ReadLine());
             Size size = Size.Single;
@@ -325,9 +326,9 @@ namespace BookAHotel
         {
             Console.WriteLine("\n");
             Console.WriteLine("Field of Vision (View):");
-            Console.WriteLine("1. Sea View");
-            Console.WriteLine("2. Landmark View");
-            Console.WriteLine("3. Mountain View\n");
+            Console.WriteLine("Option One:   Sea View");
+            Console.WriteLine("Option Two:   Landmark View");
+            Console.WriteLine("Option Three: Mountain View\n");
             Console.WriteLine("Select an option (enter only the number):\n");
             int numberOfView = Convert.ToInt32(Console.ReadLine());
             View visibiility = View.SeaView;
